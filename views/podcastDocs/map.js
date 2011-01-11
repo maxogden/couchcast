@@ -3,8 +3,8 @@ function (doc) {
     for (i in doc._attachments) {
       var attachment = doc._attachments[i];
       if (attachment.content_type == 'audio/mpeg') {
-        if (doc.couchcast_pubdatetime) {
-          var pubdatetime = doc.couchcast_pubdatetime.replace(' ','T');
+        if (doc.pubDateTime) {
+          var pubdatetime = doc.pubDateTime.replace(' ','T');
         } else {
           var pubdatetime = null;
         }

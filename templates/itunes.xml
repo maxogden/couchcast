@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>{{title}}</title>
+        <link>{{siteLink}}</link>
+        <description>{{description}}</description>
+        <language>{{language}}</language>
+        <pubDate>{{pubDate}}</pubDate>
+        <lastBuildDate>{{pubDate}}</lastBuildDate>
+        <itunes:author>{{author}}</itunes:author>
+        <itunes:explicit>{{explicit}}</itunes:explicit>
+        <itunes:owner>
+            <itunes:name>{{ownerName}}</itunes:name>
+            <itunes:email>{{ownerEmail}}</itunes:email>
+        </itunes:owner>
+        <itunes:block>no</itunes:block>
+{{#tags}}<itunes:category text="{{.}}"/>
+{{/tags}}
+
+{{#items}}
+        <item>
+            <title>{{title}}</title>
+            <link>{{articleLink}}</link>
+            <description><![CDATA[{{description}}]]></description>
+            <pubDate>{{pubDate}}</pubDate>
+            <enclosure url="{{url}}" length="{{length}}" type="{{contentType}}"/>
+            <guid isPermaLink="false">{{title}}</guid>
+            <itunes:author>{{author}}</itunes:author>
+            <itunes:subtitle>{{title}}</itunes:subtitle>
+            <itunes:summary>{{description}}</itunes:summary>
+            <itunes:explicit>{{explicit}}</itunes:explicit>
+        </item>
+{{/items}}
+    </channel>
+</rss>

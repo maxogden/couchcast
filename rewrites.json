@@ -1,0 +1,10 @@
+[
+  {
+    "from": "/feed.xml",
+    "to": "_list/atom/podcastDocs"
+  },
+  {
+    "from": "/itunes.xml",
+    "to": "_list/itunes/podcastDocs"
+  }
+]
