@@ -1,5 +1,9 @@
 [
   {
+    "from": "",
+    "to": "index.html"
+  },
+  {
     "from": "/feed.xml",
     "to": "_list/atom/podcastDocs"
   },
