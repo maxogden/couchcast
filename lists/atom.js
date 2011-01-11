@@ -20,11 +20,8 @@ function(head, req){
     rows.push(view);
   }
   
-  settings["host"] = req.headers.Host;
-  settings["domain"] = host.split(":")[0];
-  settings["items"] = rows;
-  
-  var xml = Mustache.to_html(templates.atom, settings);
+  settings.podcastConfig["items"] = rows;
+  var xml = Mustache.to_html(templates.atom, settings.podcastConfig);
   provides("xml",function(){
     return xml;
   });
